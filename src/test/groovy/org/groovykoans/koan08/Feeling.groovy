@@ -18,6 +18,7 @@ public enum Feeling {
     boolean isCase(Cartoon cartoon) {
         cartoon.feeling == this
     }
+
     // ------------ STOP EDITING HERE  ----------------------
 
 

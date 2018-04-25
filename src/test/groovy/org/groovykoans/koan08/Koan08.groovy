@@ -29,13 +29,13 @@ class Koan08 extends GroovyTestCase {
         def magicClosure = { input ->
             // ------------ START EDITING HERE ----------------------
             def result
-            switch (input) {
+            switch(input) {
                 case 1..100:
-                    result = input / 2
+                    result = input/2
                     break
                 case ~/.*ee/:
                     result = "${input[0..-3]}ey"
-                    break;
+                    break
                 default:
                     result = input
             }
@@ -99,6 +99,8 @@ class Koan08 extends GroovyTestCase {
             // ------------ START EDITING HERE ----------------------
             def random = new Random()
             [random.nextInt(maxInt), random.nextInt(maxInt)]
+
+
             // ------------ STOP EDITING HERE  ----------------------
         }
 

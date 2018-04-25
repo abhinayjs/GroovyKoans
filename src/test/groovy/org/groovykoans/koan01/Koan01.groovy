@@ -28,13 +28,12 @@ class Koan01 extends GroovyTestCase {
 
         // Let's start. First - Groovy requires much less boilerplate code. For example, in Groovy we don't
         // have to use semicolons at all. As a matter of fact, we don't always need to define the type of the variable!
-        boolean assertion = false
-        def hello = "Hola"
+        boolean assertion = true
+        def hello = "Hello"
 
         // Assign our variables the required values to continue...
         // ------------ START EDITING HERE ----------------------
-        hello = "Hello"
-        assertion = true
+
         // ------------ STOP EDITING HERE  ----------------------
 
         assert assertion, 'Assign "true" to the "assertion" variable to proceed'
@@ -90,7 +89,7 @@ class Koan01 extends GroovyTestCase {
         // Add the missing item to the Groovy list. Pay attention to the order of the items.
         // Hint: you can use either Java's add(int, String) or Groovy's plus() method.
         // ------------ START EDITING HERE ----------------------
-        groovyList = groovyList.plus(1, 'Queen')
+        groovyList.add(1, javaList.get(1));
         // ------------ STOP EDITING HERE  ----------------------
 
         // Note how Groovy allows you to compare the *content* of the lists
@@ -131,7 +130,8 @@ class Koan01 extends GroovyTestCase {
     private String createMessageForUser(UserService userService) {
         def message
         // ------------ START EDITING HERE ----------------------
-        message = "Hello ${userService.loggedInUser?.firstName ?: 'Anonymous'}!"
+        message  = "Hello ${userService.loggedInUser?.firstName?:'Anonymous'}!"
+
         // ------------ STOP EDITING HERE  ----------------------
 
         // Note how Groovy doesn't require the 'return' keyword! It will simply return the last expression.

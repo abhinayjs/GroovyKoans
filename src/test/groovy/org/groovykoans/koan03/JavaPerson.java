@@ -29,6 +29,7 @@ public class JavaPerson implements Serializable {
     public String getFirstName() {
         return firstName;
     }
+
     // ------------ STOP EDITING HERE  ----------------------
 
     public void setFirstName(String firstName) {
