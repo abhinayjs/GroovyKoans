@@ -1,5 +1,0 @@
-apply plugin: 'eclipse'
-
-tasks.withType(GroovyCompile) { options.debugOptions.debugLevel = "source,lines,vars" }
-eclipse.classpath.downloadSources = true
-eclipse.classpath.downloadJavadoc = true
