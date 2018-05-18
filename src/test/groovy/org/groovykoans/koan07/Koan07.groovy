@@ -146,7 +146,7 @@ and can become difficult to maintain"""
                       |In the land of submarines'''.stripMargin()
         def result
         // ------------ START EDITING HERE ----------------------
-
+        result  = song.replaceAll(/\w+/,{dictionary[it]?:it})
 
         // ------------ STOP EDITING HERE  ----------------------
 
@@ -172,7 +172,7 @@ and can become difficult to maintain"""
         // create the same regular expression to sum the total leftovers, but this time document the regex
         String regexp
         // ------------ START EDITING HERE ----------------------
-
+        regexp = /(?smx)#(.*?)\s+(\d+)\s+(\d+)/
 
         // ------------ STOP EDITING HERE  ----------------------
         def sum = text.findAll(regexp) { it[3].toInteger() }.sum()
